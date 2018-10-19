@@ -13,10 +13,10 @@ before_deploy:
 - sudo apt-get install --no-install-recommends --yes pdf2htmlex
 - cd deploy
 - rm *.log *.aux
-- for i in *.pdf; do mkdir ${i%%.*}; pdf2htmlEX --embed cfijo --printing 0 --optimize-text 1 --dest-dir ${i%%.*} --fit-width 1200 $i; done
-- for i in *.pdf; do title=$(grep -E "\\title ?{(.+)}" ../${i%%.*}.tex | sed -r 's|\\title ?\{(.+)\}|\1|g'); sed "s|PDF_FILENAME|$i|g" ../../templateLine.html | sed "s|HTML_FILENAME|${i%%.*}/${i%%.*}.html|g" |sed "s|TITLE|$title|g" >> lines.html; done
-- sed "s|TEMPLATE_LINES|$(<lines.html)|g" ../../template.html > index.html
-- rm lines.html
+- pdf2htmlEX --embed cfijo --printing 0 --optimize-text 1 --fit-width 1200 main.pdf
+- mv main.html demostraciones.html
+- mv main.pdf demostraciones.pdf
+- cp ../../index.html index.html
 
 deploy:
   provider: pages
