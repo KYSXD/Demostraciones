@@ -1,26 +1,55 @@
-\documentclass[10pt]{article}
-\usepackage{amssymb}
-\usepackage{graphicx}
+\documentclass[a4paper,openright,10pt]{book}
 \usepackage[spanish,es-nolists]{babel}
 \usepackage[utf8]{inputenc} 
-\usepackage{amssymb,color}
+%\usepackage{lmodern}
 \usepackage{amsmath}
-\usepackage{mathtools}
-\usepackage{enumerate}
+\usepackage{amsfonts}
+% \usepackage{tgbonum}
 \usepackage{amsthm}
-\usepackage{graphicx}
-\newcommand\myeq{\mathrel{\overset{\makebox[0pt]{\mbox{\normalfont\tiny\sffamily \textit{d}}}}{=}}}
-\newtheorem{theorem}{Teorema}
-\newtheorem{prop}{Proposición}
-\newtheorem{col}{Corolario}
-\newtheorem{ejm}{Ejemplo}
+\usepackage{mathtools}
+\usepackage[all]{xy}
+\usepackage{float}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref} %Paquete de referencias
 \usepackage{enumerate}
+\usepackage{filecontents}
+\usepackage{comment}
+\usepackage{cite} % para contraer referencias
 
+\setcounter{secnumdepth}{3} %para que ponga 1.1.1.1 en subsubsecciones
+\setcounter{tocdepth}{3} % para que ponga subsubsecciones en el indice
+
+
+\numberwithin{equation}{section}
+\theoremstyle{definition}
+
+
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem*{demo}{Demostración}
+\newtheorem{corollary}{Corolario}[theorem]
+\newtheorem{lemma}[theorem]{Lema}
+\newtheorem{prop}[theorem]{Proposición}
+\newtheorem{nota}{Nota}
+\newtheorem{obs}{Observación}
+\newtheorem{afir}{Afirmación}
+\theoremstyle{definition}
+\newtheorem{defn}{Definición}[section]
+\newtheorem{conj}{Conjetura}[section]
+\newtheorem{exmp}{Ejemplo}[section]
+
+\usepackage{color}
+
+\newcommand \numberthis { \addtocounter{equation}{1} \tag{\theequation}}
+\renewcommand{\thefootnote}{\arabic{footnote}}
+\bibliographystyle{ieeetr}
 
 
 \begin{document}
+\tableofcontents % indice de contenidos
+\chapter*{Introducción}\label{cap.introduccion}
+
+\chapter*{¿Cómo empiezo una demostración?}
+
 \begin{itemize}
-\item \textbf{¿Cómo empiezo una demostración?}:  
 \begin{enumerate}
 \item Considero que lo mas importante es saber que cosas tienes y a donde quieres llegar. 
 \item Trata de hacer un bosquejo de tus cuentas.
@@ -50,10 +79,10 @@ Para problema anteriór se presentan dos textos, unos es una demostración y el 
 
 \begin{proof}
 Empiezo dibujando la figura del problema:
-%\begin{figure}[!h]
-%	\centering
-%	{\includegraphics[width=50mm]{ejempl1.png}}
-%\end{figure}
+\begin{figure}[!h]
+	\centering
+	{\includegraphics[width=50mm]{ejempl1.png}}
+\end{figure}
 
 
 Es fácil ver que que los otros vértices del tríangulo son simétricos respecto al eje x de los vertices $(a,b)$, $(-a,b)$ entonces los vertices del triángulo son  $(-a,-b)$ y $(a,-b)$ y $(0,1)$, entonces la altura del triángulo es $H=1+b$ y base $B=2a$ entonces su area es 
