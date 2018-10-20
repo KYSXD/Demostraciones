@@ -1,0 +1,41 @@
+\documentclass[a4paper,openright,10pt]{book}
+\usepackage[spanish,es-nolists]{babel}
+\usepackage[utf8]{inputenc} 
+%\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+% \usepackage{tgbonum}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage[all]{xy}
+\usepackage{float}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref} %Paquete de referencias
+\usepackage{enumerate}
+\usepackage{filecontents}
+\usepackage{comment}
+\usepackage{cite} % para contraer referencias
+
+\setcounter{secnumdepth}{3} %para que ponga 1.1.1.1 en subsubsecciones
+\setcounter{tocdepth}{3} % para que ponga subsubsecciones en el indice
+
+\numberwithin{equation}{section}
+\theoremstyle{definition}
+
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem*{demo}{Demostración}
+\newtheorem{corollary}{Corolario}[theorem]
+\newtheorem{lemma}[theorem]{Lema}
+\newtheorem{prop}[theorem]{Proposición}
+\newtheorem{nota}{Nota}
+\newtheorem{obs}{Observación}
+\newtheorem{afir}{Afirmación}
+\theoremstyle{definition}
+\newtheorem{defn}{Definición}[section]
+\newtheorem{conj}{Conjetura}[section]
+\newtheorem{exmp}{Ejemplo}[section]
+
+\usepackage{color}
+
+\newcommand \numberthis { \addtocounter{equation}{1} \tag{\theequation}}
+\renewcommand{\thefootnote}{\arabic{footnote}} 
+\bibliographystyle{ieeetr} 
