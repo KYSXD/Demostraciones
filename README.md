@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/KYSXD/Demostraciones---Github.svg?branch=master)](https://travis-ci.com/KYSXD/Demostraciones---Github)
+[![Build Status](https://travis-ci.com/KYSXD/Demostraciones.svg?branch=master)](https://travis-ci.com/KYSXD/Demostraciones)
 
 # Demostraciones
 
